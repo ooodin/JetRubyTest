@@ -34,7 +34,7 @@ class AuthManagerImp: AuthManager {
         
         if let code = url.valueOf(queryParamaterName: "code") {
             sessionManager.setCode(code: code)
-            sessionManager.updateAuthToken(completion: nil)
+            sessionManager.getAuthToken()
         }
     }
 }

@@ -13,7 +13,10 @@ import Argo
 protocol NetworkManager {
     func updateAuthToken(code: String, success: @escaping ((JSON) -> Void), failure: @escaping ((Error) -> Void)) -> Void
     func getShots(success: @escaping ((JSON) -> Void), failure: @escaping ((Error) -> Void)) -> Void
+    func loadImage(imageURL: String, completion: @escaping ((UIImage)->Void)) -> Void
 }
+
+let imageCache = NSCache<AnyObject, AnyObject>()
 
 class NetworkManagerImp: NetworkManager {
     
@@ -41,7 +44,6 @@ class NetworkManagerImp: NetworkManager {
                 case let .success(data):
                     do {
                         let json = try JSONSerialization.jsonObject(with: data)
-                        print(json)
                         success(JSON(json))
                     } catch let error {
                         failure(error)
@@ -64,7 +66,6 @@ class NetworkManagerImp: NetworkManager {
         
         return modifiedParams
     }
-    
 }
 
 extension NetworkManagerImp {
@@ -90,6 +91,27 @@ extension NetworkManagerImp {
         
         request(shotsURL, method: HTTPMethod.get,
                 parameters: nil, headers: nil, success: success, failure: failure)
+    }
+    
+    func loadImage(imageURL: String, completion: @escaping ((UIImage)->Void)) {
+        
+        let target = URL(string: imageURL)!
+        
+        Alamofire.request(target, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .validate(statusCode: 200..<300)
+            .responseData { response in
+                
+                switch response.result {
+                case let .success(data):
+                    if let image = UIImage(data: data) {
+                        imageCache.setObject(image, forKey: imageURL as AnyObject)
+                        completion(image)
+                    }
+                case let .failure(error):
+                    DialogManager.showErrorMessage(message: error.localizedDescription)
+                }
+        }
+        
     }
     
 }

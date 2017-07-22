@@ -9,37 +9,23 @@
 import Foundation
 
 protocol SessionManager {
+    var delegate: SessionManagerDelegate? { get set }
     var tokenModel: AuthToken? { get }
-    var authCode: String? { get }
     
     func setToken(token: AuthToken) -> Void
     func setCode(code: String) -> Void
+    
+    func loadAuthToken() -> Void
+    func getAuthToken() -> Void
     func updateAuthToken(completion: (()->())?) -> Void
 }
 
 class SessionManagerImp: SessionManager {
     
-    private(set) var tokenModel: AuthToken?
-    private(set) var authCode: String?
+    var delegate: SessionManagerDelegate?
     
-    init() {
-        loadFromKeychain()
-    }
-    
-    fileprivate func loadFromKeychain() {
-        
-        if let code = KeychainManager.loadAuthCode() {
-            self.authCode = code
-            
-            if let token = KeychainManager.loadAuthToken() {
-                self.tokenModel = AuthToken(token: token, type: "bearer")
-            } else {
-                updateAuthToken(completion: nil)
-            }
-        } else {
-            AuthManagerImp().startDribbbleLogin()
-        }
-    }
+    fileprivate(set) var tokenModel: AuthToken?
+    fileprivate(set) var authCode: String?
     
     func setToken(token: AuthToken) {
         self.tokenModel = token
@@ -54,6 +40,29 @@ class SessionManagerImp: SessionManager {
 }
 
 extension SessionManagerImp {
+    
+    func loadAuthToken() {
+        
+        if let code = KeychainManager.loadAuthCode() {
+            self.authCode = code
+            
+            if let token = KeychainManager.loadAuthToken() {
+                self.tokenModel = AuthToken(token: token, type: "bearer")
+                self.delegate?.updateData()
+            } else {
+                getAuthToken()
+            }
+        } else {
+            AuthManagerImp().startDribbbleLogin()
+        }
+    }
+
+    
+    func getAuthToken() {
+        updateAuthToken(completion: {
+            self.delegate?.updateData()
+        })
+    }
     
     func updateAuthToken(completion: (()->())?) {
         
@@ -74,7 +83,7 @@ extension SessionManagerImp {
                     DialogManager.showErrorMessage(message: error.localizedDescription)
             })
         } else {
-            loadFromKeychain()
+            loadAuthToken()
         }
     }
 }

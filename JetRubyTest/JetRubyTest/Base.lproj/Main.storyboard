@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tGh-ny-e0k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y8M-4K-wcQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Dribbble-->
         <scene sceneID="4f7-NJ-VoI">
             <objects>
                 <collectionViewController id="tGh-ny-e0k" customClass="CollectionViewController" customModule="JetRubyTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="8Yz-mv-rIi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8Yz-mv-rIi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.3413856924" green="0.44361311199999998" blue="0.58831048009999998" alpha="0.70615096830985913" colorSpace="custom" customColorSpace="displayP3"/>
@@ -30,10 +30,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="234"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-Xg-U8V">
-                                            <rect key="frame" x="0.0" y="184" width="324" height="50"/>
+                                            <rect key="frame" x="0.0" y="159" width="324" height="75"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL9-xE-Hin">
+                                                    <rect key="frame" x="4.5" y="5" width="314" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-9q-YLK">
-                                                    <rect key="frame" x="8" y="8" width="308" height="34"/>
+                                                    <rect key="frame" x="5" y="31" width="314" height="33.5"/>
                                                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris elit, sollicitudin non odio lobortis, laoreet molestie ipsum. Curabitur vestibulum semper enim, quis lacinia mauris dictum eu.</string>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,14 +48,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.41175176056338031" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="Ajk-cq-laX"/>
-                                                <constraint firstAttribute="trailing" secondItem="Yyy-9q-YLK" secondAttribute="trailing" constant="8" id="DjO-Ts-Xd5"/>
-                                                <constraint firstItem="Yyy-9q-YLK" firstAttribute="top" secondItem="bLI-Xg-U8V" secondAttribute="top" constant="8" id="XI0-Y4-yiU"/>
-                                                <constraint firstAttribute="bottom" secondItem="Yyy-9q-YLK" secondAttribute="bottom" constant="8" id="Z5p-zE-bTv"/>
-                                                <constraint firstItem="Yyy-9q-YLK" firstAttribute="leading" secondItem="bLI-Xg-U8V" secondAttribute="leading" constant="8" id="x6N-gb-Wv8"/>
+                                                <constraint firstAttribute="trailing" secondItem="IL9-xE-Hin" secondAttribute="trailing" constant="5" id="0n4-Tt-x0E"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yyy-9q-YLK" secondAttribute="bottom" constant="10.5" id="3um-iQ-LpC"/>
+                                                <constraint firstItem="IL9-xE-Hin" firstAttribute="top" secondItem="bLI-Xg-U8V" secondAttribute="top" constant="5" id="9QR-of-51D"/>
+                                                <constraint firstItem="IL9-xE-Hin" firstAttribute="leading" secondItem="bLI-Xg-U8V" secondAttribute="leading" constant="5" id="9lP-Uj-4Da"/>
+                                                <constraint firstAttribute="height" constant="75" id="Ajk-cq-laX"/>
+                                                <constraint firstItem="Yyy-9q-YLK" firstAttribute="top" secondItem="IL9-xE-Hin" secondAttribute="bottom" constant="5" id="CSA-pa-zLC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yyy-9q-YLK" secondAttribute="trailing" constant="5" id="DjO-Ts-Xd5"/>
+                                                <constraint firstItem="Yyy-9q-YLK" firstAttribute="leading" secondItem="bLI-Xg-U8V" secondAttribute="leading" constant="5" id="x6N-gb-Wv8"/>
                                             </constraints>
                                         </view>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="al5-RO-TlF">
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="al5-RO-TlF">
                                             <rect key="frame" x="152" y="107" width="20" height="20"/>
                                             <color key="color" red="0.3413856924" green="0.44361311199999998" blue="0.58831048009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </activityIndicatorView>
@@ -72,6 +81,7 @@
                                     <outlet property="activity" destination="al5-RO-TlF" id="lyp-KP-JwB"/>
                                     <outlet property="descriptionLabel" destination="Yyy-9q-YLK" id="aV6-j0-u7Q"/>
                                     <outlet property="imageView" destination="b5N-Xy-FcB" id="xk4-CE-s0W"/>
+                                    <outlet property="titleLabel" destination="IL9-xE-Hin" id="qw9-2H-Mi8"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -80,8 +90,27 @@
                             <outlet property="delegate" destination="tGh-ny-e0k" id="EYr-tG-uQD"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Dribbble" id="Fp5-U9-PFm"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNQ-RT-yfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="152.47376311844079"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ktr-AS-XLB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y8M-4K-wcQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QNX-FW-NBm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tGh-ny-e0k" kind="relationship" relationship="rootViewController" id="qRi-gw-7kp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qY-g4-R4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-415.19999999999999" y="152.47376311844079"/>
         </scene>

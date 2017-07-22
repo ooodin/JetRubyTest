@@ -9,35 +9,40 @@
 import UIKit
 import AVFoundation
 
-class CollectionViewController: UICollectionViewController {
+protocol SessionManagerDelegate {
+    func updateData() -> Void
+}
+
+class CollectionViewController: UICollectionViewController, SessionManagerDelegate {
     
     var shots: [Shot] = []
+    var network: NetworkManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+        network = NetworkManagerImp()
+        
+        collectionView!.contentInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         collectionView?.refreshControl = UIRefreshControl()
-        collectionView?.refreshControl?.addTarget(self, action: #selector(updateShots), for: .valueChanged)
+        collectionView?.refreshControl?.addTarget(self, action: #selector(updateData), for: .valueChanged)
         collectionView?.refreshControl?.beginRefreshing()
     
         let layout = collectionViewLayout as! DribbbleLayout
         layout.cellPadding = 5
         layout.delegate = self
         
-        updateShots()
+        sessionManager.delegate = self
+        sessionManager.loadAuthToken()
     }
     
-    func updateShots() {
+    func updateData() {
         
-        let network = NetworkManagerImp()
-        
-        network.getShots(success: { [weak self] json in
+        network?.getShots(success: { [weak self] json in
             let result = [Shot].decode(json)
             switch result {
             case let .success(shots):
-                self?.shots = shots
-                self?.collectionView?.reloadData()
+                self?.setShots(shots)
             case let .failure(error):
                 DialogManager.showErrorMessage(message: error.localizedDescription)
             }
@@ -47,6 +52,33 @@ class CollectionViewController: UICollectionViewController {
             DialogManager.showErrorMessage(message: error.localizedDescription)
             self.collectionView?.refreshControl?.endRefreshing()
         }
+    }
+    
+    func setShots(_ newShots: [Shot]) {
+        
+        let temp = Array(newShots.filter{ !$0.animated }.prefix(50))
+        
+        if self.shots.count == 0 {
+            self.shots = temp.sorted { $0.0.isCached.hashValue > $0.1.isCached.hashValue }
+        } else {
+            self.shots = temp
+        }
+
+        self.collectionView?.reloadData()
+    }
+    
+    func loadImage(shot: Shot) {
+     
+        network?.loadImage(imageURL: shot.imageURL, completion: { (image) in
+            DispatchQueue.main.async {
+                shot.image = image
+                self.collectionView?.reloadData() //TODO: Optimisation
+                
+//                if self.collectionView?.indexPathsForVisibleItems.contains(index) ?? false {
+//                    self.collectionView?.reloadItems(at: [index])
+//                }
+            }
+        })
     }
     
 }
@@ -59,7 +91,13 @@ extension CollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DribbbleCell", for: indexPath) as! CollectionViewCell
-        cell.shot = shots[indexPath.item]
+        let shot = shots[indexPath.item]
+        
+        if shot.image == nil {
+            loadImage(shot: shot)
+        }
+        
+        cell.shot = shot
         return cell
     }
     

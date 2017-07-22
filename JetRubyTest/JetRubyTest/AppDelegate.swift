@@ -8,7 +8,7 @@
 
 import UIKit
 
-let sessionManager: SessionManager = SessionManagerImp()
+var sessionManager: SessionManager = SessionManagerImp()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        print("token - ", sessionManager.tokenModel?.token ?? "")
         return true
     }
     
