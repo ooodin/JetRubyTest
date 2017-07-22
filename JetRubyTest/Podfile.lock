@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Argo (4.1.2):
+    - Runes (>= 4.0.0)
+  - Curry (3.0.0)
+  - Runes (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Argo (~> 4.0)
+  - Curry
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Argo: 5db06502fc1222d83011f574243089dab25202ff
+  Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  Runes: 72a67a5bbbe1b5fdae08b5a01b10c60d83fc69aa
+
+PODFILE CHECKSUM: 34d45eda485b4bc963964e4c8fb87a03357c9c48
+
+COCOAPODS: 1.2.1
