@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D39C91E3D86DAFDFBA3F5485 /* Pods_JetRubyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B70D2A7BC586FF823188708 /* Pods_JetRubyTestTests.framework */; };
 		EC122B041F211B1900E93B29 /* DialogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B031F211B1900E93B29 /* DialogsManager.swift */; };
 		EC122B061F216C7000E93B29 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B051F216C7000E93B29 /* Shot.swift */; };
 		EC122B0C1F21723E00E93B29 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B0B1F21723E00E93B29 /* CollectionViewController.swift */; };
 		EC122B0E1F21728800E93B29 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B0D1F21728800E93B29 /* CollectionViewCell.swift */; };
 		EC122B101F22242300E93B29 /* DribbbleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B0F1F22242300E93B29 /* DribbbleLayout.swift */; };
+		EC122B181F2455BA00E93B29 /* JetRubyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC122B171F2455BA00E93B29 /* JetRubyTestTests.swift */; };
+		EC122B211F24629C00E93B29 /* Shot.json in Resources */ = {isa = PBXBuildFile; fileRef = EC122B201F24629C00E93B29 /* Shot.json */; };
 		EC96D2ED1F21045C002528D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96D2EC1F21045C002528D6 /* KeychainManager.swift */; };
 		EC96D2EF1F210606002528D6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96D2EE1F210606002528D6 /* AuthManager.swift */; };
 		ECB513321F2061EC00980E78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB513311F2061EC00980E78 /* AppDelegate.swift */; };
@@ -26,14 +29,31 @@
 		F2F20AF2F0CB127B0B99E76B /* Pods_JetRubyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF25FC385230AF9E66DEF185 /* Pods_JetRubyTest.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC122B1A1F2455BA00E93B29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECB513261F2061EC00980E78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECB5132D1F2061EC00980E78;
+			remoteInfo = JetRubyTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1B70D2A7BC586FF823188708 /* Pods_JetRubyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetRubyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C6D391CB06CE5E877D1B31 /* Pods-JetRubyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetRubyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetRubyTest/Pods-JetRubyTest.release.xcconfig"; sourceTree = "<group>"; };
+		B1F15D40239C871F4CC9AC8A /* Pods-JetRubyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetRubyTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetRubyTestTests/Pods-JetRubyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C061A3AC189EE0ED5F28F2BF /* Pods-JetRubyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetRubyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetRubyTest/Pods-JetRubyTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C5C14084AD324346AFB090C3 /* Pods-JetRubyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetRubyTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetRubyTestTests/Pods-JetRubyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC122B031F211B1900E93B29 /* DialogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsManager.swift; sourceTree = "<group>"; };
 		EC122B051F216C7000E93B29 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		EC122B0B1F21723E00E93B29 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		EC122B0D1F21728800E93B29 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EC122B0F1F22242300E93B29 /* DribbbleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleLayout.swift; sourceTree = "<group>"; };
+		EC122B151F2455BA00E93B29 /* JetRubyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetRubyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC122B171F2455BA00E93B29 /* JetRubyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetRubyTestTests.swift; sourceTree = "<group>"; };
+		EC122B191F2455BA00E93B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC122B201F24629C00E93B29 /* Shot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shot.json; sourceTree = "<group>"; };
 		EC96D2EC1F21045C002528D6 /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		EC96D2EE1F210606002528D6 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		ECB5132E1F2061EC00980E78 /* JetRubyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetRubyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +71,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC122B121F2455BA00E93B29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39C91E3D86DAFDFBA3F5485 /* Pods_JetRubyTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB5132B1F2061EC00980E78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				EF25FC385230AF9E66DEF185 /* Pods_JetRubyTest.framework */,
+				1B70D2A7BC586FF823188708 /* Pods_JetRubyTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,14 +104,35 @@
 			children = (
 				C061A3AC189EE0ED5F28F2BF /* Pods-JetRubyTest.debug.xcconfig */,
 				91C6D391CB06CE5E877D1B31 /* Pods-JetRubyTest.release.xcconfig */,
+				C5C14084AD324346AFB090C3 /* Pods-JetRubyTestTests.debug.xcconfig */,
+				B1F15D40239C871F4CC9AC8A /* Pods-JetRubyTestTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC122B161F2455BA00E93B29 /* JetRubyTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC122B171F2455BA00E93B29 /* JetRubyTestTests.swift */,
+				EC122B201F24629C00E93B29 /* Shot.json */,
+				EC122B1F1F24627500E93B29 /* Support */,
+			);
+			path = JetRubyTestTests;
+			sourceTree = "<group>";
+		};
+		EC122B1F1F24627500E93B29 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EC122B191F2455BA00E93B29 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		ECB513251F2061EC00980E78 = {
 			isa = PBXGroup;
 			children = (
 				ECB513301F2061EC00980E78 /* JetRubyTest */,
+				EC122B161F2455BA00E93B29 /* JetRubyTestTests */,
 				ECB5132F1F2061EC00980E78 /* Products */,
 				D8FFDD07687DCE1050B2BBB6 /* Pods */,
 				C7FBF8ADF56B33226584B86F /* Frameworks */,
@@ -93,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB5132E1F2061EC00980E78 /* JetRubyTest.app */,
+				EC122B151F2455BA00E93B29 /* JetRubyTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +215,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EC122B141F2455BA00E93B29 /* JetRubyTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC122B1C1F2455BA00E93B29 /* Build configuration list for PBXNativeTarget "JetRubyTestTests" */;
+			buildPhases = (
+				C4E3C35771053979F4C1C4D4 /* [CP] Check Pods Manifest.lock */,
+				EC122B111F2455BA00E93B29 /* Sources */,
+				EC122B121F2455BA00E93B29 /* Frameworks */,
+				EC122B131F2455BA00E93B29 /* Resources */,
+				A0E4D804BAF0A51D83BC9580 /* [CP] Embed Pods Frameworks */,
+				DCBC8F871592A7C13C01FB04 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC122B1B1F2455BA00E93B29 /* PBXTargetDependency */,
+			);
+			name = JetRubyTestTests;
+			productName = JetRubyTestTests;
+			productReference = EC122B151F2455BA00E93B29 /* JetRubyTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ECB5132D1F2061EC00980E78 /* JetRubyTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECB513401F2061EC00980E78 /* Build configuration list for PBXNativeTarget "JetRubyTest" */;
@@ -194,6 +266,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Artem Semavin";
 				TargetAttributes = {
+					EC122B141F2455BA00E93B29 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ARN263RGLR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECB5132D1F2061EC00980E78;
+					};
 					ECB5132D1F2061EC00980E78 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = ARN263RGLR;
@@ -215,11 +293,20 @@
 			projectRoot = "";
 			targets = (
 				ECB5132D1F2061EC00980E78 /* JetRubyTest */,
+				EC122B141F2455BA00E93B29 /* JetRubyTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC122B131F2455BA00E93B29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC122B211F24629C00E93B29 /* Shot.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB5132C1F2061EC00980E78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +350,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetRubyTest/Pods-JetRubyTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A0E4D804BAF0A51D83BC9580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetRubyTestTests/Pods-JetRubyTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BFA3CB0F05671200BE8E0EC4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,9 +380,47 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetRubyTest/Pods-JetRubyTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C4E3C35771053979F4C1C4D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DCBC8F871592A7C13C01FB04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetRubyTestTests/Pods-JetRubyTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC122B111F2455BA00E93B29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC122B181F2455BA00E93B29 /* JetRubyTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB5132A1F2061EC00980E78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +443,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EC122B1B1F2455BA00E93B29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECB5132D1F2061EC00980E78 /* JetRubyTest */;
+			targetProxy = EC122B1A1F2455BA00E93B29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ECB513351F2061EC00980E78 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -323,6 +471,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EC122B1D1F2455BA00E93B29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C14084AD324346AFB090C3 /* Pods-JetRubyTestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ARN263RGLR;
+				INFOPLIST_FILE = JetRubyTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ooodin.JetRubyTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetRubyTest.app/JetRubyTest";
+			};
+			name = Debug;
+		};
+		EC122B1E1F2455BA00E93B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1F15D40239C871F4CC9AC8A /* Pods-JetRubyTestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ARN263RGLR;
+				INFOPLIST_FILE = JetRubyTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ooodin.JetRubyTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JetRubyTest.app/JetRubyTest";
+			};
+			name = Release;
+		};
 		ECB5133E1F2061EC00980E78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +625,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC122B1C1F2455BA00E93B29 /* Build configuration list for PBXNativeTarget "JetRubyTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC122B1D1F2455BA00E93B29 /* Debug */,
+				EC122B1E1F2455BA00E93B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECB513291F2061EC00980E78 /* Build configuration list for PBXProject "JetRubyTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

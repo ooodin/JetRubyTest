@@ -23,7 +23,7 @@ class NetworkManagerImp: NetworkManager {
     fileprivate func request(_ target: URL, method: HTTPMethod, parameters: [String: Any]?, headers: HTTPHeaders?, success: @escaping ((JSON) -> Void), failure: @escaping ((Error) -> Void)) {
         
         let headersWithDefault = addDefaultHeadersTo(headers)
-        
+    
         Alamofire.request(target, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headersWithDefault)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])

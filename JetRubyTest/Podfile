@@ -11,4 +11,12 @@ target 'JetRubyTest' do
     pod 'Argo', '~> 4.0'
     pod 'Curry'
     
+    target 'JetRubyTestTests' do
+        inherit! :search_paths
+        pod 'Argo', '~> 4.0'
+        pod 'Curry'
+    end
+    
 end
+
+
